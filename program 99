@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    char date[20];
+    int i = 0;
+
+    printf("Enter date (dd/04/yyyy): ");
+    scanf("%19s", date);
+
+    // Print day
+    while (date[i] != '/') {
+        printf("%c", date[i]);
+        i++;
+    }
+
+    printf("-Apr-");
+
+    // Skip /04/
+    i = i + 4;
+
+    // Print year
+    while (date[i] != '\0') {
+        printf("%c", date[i]);
+        i++;
+    }
+
+    return 0;
+}

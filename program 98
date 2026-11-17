@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0, lastSpace = -1;
+
+    printf("Enter your full name: ");
+    scanf("%99[^\n]", str);
+
+    // Find the last space
+    while (str[i] != '\0') {
+        if (str[i] == ' ')
+            lastSpace = i;
+        i++;
+    }
+
+    printf("Result: ");
+
+    // Print initials before surname
+    for (i = 0; i < lastSpace; i++) {
+        if (i == 0 || str[i - 1] == ' ') {
+            if (str[i] != ' ')
+                printf("%c.", str[i]);
+        }
+    }
+
+    // Print full surname
+    if (lastSpace != -1) {
+        for (i = lastSpace + 1; str[i] != '\0'; i++) {
+            printf("%c", str[i]);
+        }
+    }
+    else {
+        printf("%s", str);
+    }
+
+    return 0;
+}

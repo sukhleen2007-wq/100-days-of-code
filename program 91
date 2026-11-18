@@ -1,4 +1,4 @@
-[10:22 PM, 11/17/2026] Shourya Jaiswal : #include <stdio.h>
+ #include <stdio.h>
 
 int main() {
     char str[100], result[100];
@@ -28,4 +28,4 @@ int main() {
 
     return 0;
 }
-[10:22 PM, 11/17/2026] Shourya Jaiswal : 
+ 
